@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function trueWords(word) {
+            let words = word.trim().split(' '); 
+
+            let Chu = words.map(word => {
+                let firstChar = word.charAt(0).toUpperCase(); 
+                let restChars = word.slice(1).toLowerCase(); 
+                return firstChar + restChars;
+            });
+
+            let trueWords = Chu.join(' ');
+
+            return trueWords;
+        }
+
+        let word1 = " this is A tEst ";
+        let chu1 = trueWords(word1);
+        console.log(chu1); 
+
+        let word2 = "heLlo riKkei academy";
+        let chu2 = trueWords(word2);
+        console.log(chu2); 
+    </script>
+</body>
+
+</html>
